@@ -1,0 +1,76 @@
+*abstract
+
+The pandemic situation has been though for everyone.Thousands of lives were lossed.A major part of the affected and the casulties were the medical personnels and doctors who were responsible for treating Covid - 19 patients. In such times, The doctors and the medical staff are the most valuable asset for the country and it's people.Hence,we provide a solution that may decrease the mortality of such saviors."Safe-oxi" is a safe and contact free approach in comparison to traditional use of pulse oximeter for calculation of covid patient's blood oxygen saturation and other useful parameters with the use of IOT and Machine learning.Safe - oxi will also result in the overall efficiency of covid ward as the system will make it possible to monitor multiple patients at the same time.
+
+*Introduction
+**Background and basics
+
+Mortality rate of doctors has been a rising concern since the beginning of Pandemic.COVID-19 has caused a huge burden and loss to the world with doctors bearing the brunt of physical burnout, mental stress, occupational risk of infection with increased risk of morbidity and mortality, being the front-line workers.Especially in India,The mortality of these doctors has made a dent in an already compromised health care system due to poor doctor patient ratio.he Indian Medical Association (IMA) National COVID-19 registry data suggests more than 1000 doctors have been infected with Covid-19 virus, where 75% of them are above the age of 50 years .Concerns have been raised since nearly 200 doctors have succumbed to COVID-19 so far with a significant number of healthcare professionals affected as well.IMA has issued a ‘Red Alert’ and requested the health authorities to ensure adequate safety of all doctors along with support from state sponsored medical and life insurance facilities to all involved in the coronavirus containment efforts.Doctors account for 0.5% of the total deaths in India due to Covid-19.
+
+But that's not it,since a doctor is different from any other patient.A doctor or any medical staff is a valuable resource since absence of each medical authority will affect the treatment of patients vastly.Due to poor doctor to p[atient ratio, the hospitals have already been overflowing with patients.Also, the shortage of PPE suits have also culminated into spreading covid among the medical staff responsible for the patients.
+
+According to World health organization,The virus that cause COVID-19 spreads primarily through droplets generated when an infected person coughs, sneezes or speaks.ou can also become infected by touching a contaminated surface and then touching your eyes, nose or mouth before washing your hands.Hence,It was really necessary to minimize the contact between a covid affected and the doctor also to provide a system that will allow doctors to treat multiple patients at the same time.
+
+**Literature survey
+***Development of wearable pulse oximeter based on internet of things and signal processing techniques
+
+Authors:Yuyang Xie, Yongjie Gao, Yuchun Li, Yu Lu,Weixi Li
+
+IoT based wearable blood oxygen saturation monitoring device which applies advanced signal processing and wireless communication technology.The device is able to monitor the patients’ blood oxygen
+saturation, pulse rate and perfusion index and transmits the
+real time data to the mobile phone or server, which allows
+the health care providers to know their patients’ health
+promptly.We understood how pulse oximeter works and can be made wireless using the IOT Techniques.
+
+***A patch type wireless forehead pulse oximeter for Spo2 measurement
+
+Authors:A. Azhari, S. Yoshimoto, T. Nezu, H. Iida, H. Ota, Y.
+Noda, T. Araki, T. Uemura and T. Sekitani,K. Morii
+
+A wireless wearable patch-type forehead pulse
+oximeter can be developed to replace conventional large, cable-
+connected, tabletop, non-wearable forehead pulse oximeters.
+The dimensions of the flexible circuit are 7 cm × 2 cm,
+interfaced with an 8.5 cm × 3.5 cm wireless system board. With
+only 15 g weight, it is easily wearable on the forehead under an
+elastic band. The system can wirelessly transmit the detected
+photoplethysmographic (PPG) signals from the forehead to a
+remote PC in real time, where software calculates heart beat rate
+and the percentage of blood oxygen saturation: the SpO 2 value.
+The SpO 2 values measured using our system were verified and
+matched with the commercial non-wearable pulse oximeters
+both in normal and breathhold conditions.The paper sheds light on approxiate size on weight and how a real wearable pulse oximeter will be.
+
+***Covid -19 and mortality in doctors
+
+Authors: Karthikeyan P. Iyengar,Pranav Ish,Gaurav Kumar Upadhyaya,Nipun Malhotra,Raju Vaishya,Vijay Kumar Jain
+
+The significant mortality amongst doctors and other health care
+workers involved in the coronavirus frontline has been concerning.
+There are various regional differences among countries and various
+risk-factors which lead to variable burden, Concerted efforts to
+understand the factors highlighted in the article, mitigating con-
+founding factors, risk assessments and adequate protection of
+health care professionals is the need of the hour to support them in
+this public health crisis. This should not become one more unin-
+tended consequence of the COVID-19 pandemic.
+
+**Project Undertaken
+***Project defination
+
+To provide a complete remote monitoring system for a covid patient that will significantly decrease the mortality and chances of contracting covid-19 virus amongst the medical authorities, The system should also solve the problem of low patient to doctor ratio by abling doctors to monitor multiple patients at the same time.The system will also solve the problem of using different devices for body temperature and blood oxygen saturation and decrease overall chances of contact among the actors.
+
+***Scope statement
+
+This project invloves building  of a web based as well as app based system that once powered by IOT hardware can be used to get real time medical statistics of a covid patient,with good support of machine learning algorithms the system will be able to analyse each patients condition and further help doctor in understanding the patient well.The system will eliminate the use of pulse oximeter and thermometer separately by providing a device that may sense both.Further a real time alert system will also be introduced so that in critical situations doctors and responsible staff will be notified.Using this infrastructure we hope to minimize the chances of spread of contagious diseases among the medical personnel.
+
+**Organization of project report
+
+The overall report revolves around the objective of achieveing remote covid patient monitoring and analysis system.
+First chapter deals with introduction of pandemic situation,Problem defination and possible solution with use of IOT and Cloud support as well as machine learning.Literature survey and project undertaken is also described.
+Second chapter comprises of project planning and management.In that we include system Requirements Specification(SRS), Project Process Modeling,Cost and Effort estimates and finally project scheduling.
+Third chapter deals with analysis and design.In this we include Idea matrix and UML Diagrams.
+Fourth chapter deals with the testing modules implemented on the project.In this we include unit testing,Integration testing,Acceptence testing and gui testing.
+The above defines the flow this report.
+
+

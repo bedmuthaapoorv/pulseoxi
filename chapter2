@@ -1,0 +1,124 @@
+this chapter covers the project planning and management details.It also covers System Requirements Specifications.SRS is considered as the base for the effort estimations and project scheduling.
+
+*detail System Requirement specification (SRS)
+
+** System overview
+"Safe Oxi" integrates Internet Of Things with Disease Monitoring bu creating a single consistent platform which caters to different medical needs for a hospital.The following are the main features of SAFE-OXI:
+
+1.Cross Platform Support:Provides App support for Android,IOS as well as browser.
+
+2.Real Time Data : Provides real time data with just 1 click.
+
+3.Emergency Notification system: System that notifies the medical staff when the patient is moving in critical situation
+
+4.Single device,Multiple data: The same device monitors multiple measures such as BPM,Temperature and Oxygen Saturation.
+
+5.Data Analytics and Prediction support:Complete analysis and statistics provided within the application.
+
+6.Live Covid 19 stats: Doctors can get Live covid stats by use of API's 
+
+7.Downloadable files:The data and Stats can be downloaded in PDF format
+
+**Functional Requirements
+
+data should be updated after every 1 minute.
+
+emergency notification must be sent as soon as data turns out to be critical
+
+The data and statistics generated must be downloadable in pdf format
+
+The data will analysed and be run through data mining algorithms to make predictions and statistics.
+
+Hardware specifications: NodeMCU(ESP8266) wifi module,MAX30100 sensor and jumper cables.
+
+The System developed must be cross platform and should be accesible from android,ios as well as browser.
+
+**Non-Functional Requirements:
+
+*** Performance Requirements
+
+When we scale our primary requirement will be near real-time performance of application.We will be fetching data and inferring from it which is critical and data changes every minute and it should impact our predictions upto a certain extent.
+
+***Security Requirements
+
+Data Management and privacy protection will be very critical because of the use of patient's personal medical records.We will be using a login system to prioratise access and might be implementing encryption while transmission of data.
+
+
+***Software Quality Attributes
+
+Continuos Contact of device and patient:
+The device needs to be connected to the patient at all times,since the system can be used efficiently if data is continuosly updated on cloud.
+
+***Basic internet connection
+
+the app and device are both using cloud services and hence need a constant internet connection.
+
+**Deployment Enviornment
+
+***Hardware Requirements
+
+- Stable Internet Connection
+- NodeMCU micro-controller(ESP8266)
+- MAX30105 pulse oxi sensor 
+- jumper cables
+- APK or browser for accesing output
+
+***Software Requirements
+
+- Arduino IDE for writing and uploading code to ESP8266
+- Wire.h library for connection and port recognisation between ESP8266 and sensors
+- MAX30105.h library for using and controlling pulse oxi sensor
+- heartRate.h library for calculating heart rate from th sensor readings
+- ThingSpeak.h library for connecting the micro controller to Thingspeak cloud.
+- ESP8266WiFi.h library for using the wifi module of the micro controller.
+- Axios JavaScript Library for fetching data and making a get request on thingspeak cloud.
+- FireBase Web Api for hosting and Management of Safe-Oxi Website.
+- GoNative.io for Cross Platform app generation.
+
+**External Interface Requirements
+
+***User Interfaces
+
+- Login Page to only allow authorized users to access the platform.
+- Dashboard for actual representation of data and statistics.
+- Profile page for owner's / hospital's information
+
+***Communication Interfaces
+
+- Web Browser with stable internet connection . eg:Mozilla Firefox,Google Chrome,Opera Mini,etc.
+- Stable network with a minimum internet speed of 400-500kbps for uploading as well as downloading data to and fro from cloud.
+
+**Other Requirements 
+
+***Completeness
+
+All external libraries including their respective license will be documented.
+
+***Usability
+
+- Web applications have grown to expect easy way of presenting data,graphs and statistics.
+
+-Given Help annotations for new usrs for better understanding of features and it's capablities.
+
+***Maintainablity
+
+Application code will be cohesive and have easily recognizable functionality.Classes will be abstract enough to facilitate data structure changes.Class and function modularity will be implemented to avoid the need for major refactoring.
+
+*Cost & Efforts and Estimates
+
+Cost of the project will be the cost of hardware plus the cost of the work that is put in.Basic COCOMO:
+
+Project class: 
+We have determined our project is the characteristics of semi-detached mode as project is college level and requirements are rigid and less than rigid.
+
+Number Of Code Lines:We estimate our project will have 10000 delivered source instructions
+
+So the basic COCOMO model equations are as follows:
+
+*COCOMO formulas with notations*
+
+* Project Scheduling
+
+** Time Line Chart
+
+
