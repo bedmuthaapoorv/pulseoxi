@@ -1,26 +1,33 @@
 <html>
 <head>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="Styles.css" ></style>
 </head>
-    <body style="text-align:center">
-        <div>
-            <button onclick="get()">Get Current Readings</button>   
-           <div>BPM</div>
-            <div id="output"></div>        
+    <body>
+        <div class="container">
+            <div class="container__refresh" onclick="get()">
+                Refresh
+            </div>
+            <div class="container__sensorReadings">
+                <div class="container__BPMcont">
+                    <div id="bpm" class="container__BPM">0</div>
+                    <div class="container__BPMText">Beats Per Minute</div>
+                </div>
+                <div class="container__divider">
+
+                </div>
+                <div class="container__BPMcont">
+                    <div id="o2" class="container__BPM">0</div>
+                    <div class="container__BPMText">Oxygen Saturation</div>
+                </div>
+                    
+            </div>
         </div>
-    <script>
-    function get(){
-    axios({
-        "method": "GET",
-        "url": "https://api.thingspeak.com/channels/1045791/feeds.json?api_key=Z7GLYGYG00M4DKOJ&results=1"
-    }).then(response => {
-        updateData(response.data);
-    });
-}
-function updateData(abc){
-console.log(abc);
-    document.getElementById("output").innerHTML=abc.feeds[0].field1;
-}
+        
+        
+        
+        
+    <script src="serverSide.js">
     </script>
     </body>
 </html>

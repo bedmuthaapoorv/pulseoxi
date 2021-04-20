@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@500&display=swap');
+body{
+    .container{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+
+    align-items: center;
+    &__refresh{
+        margin-top: 26px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background: #57F3C4;
+        border-radius: 8px;
+        width:95vw;
+        height:57px;
+        font-size:26px;
+        font-family: 'Montserrat', sans-serif;
+        color:white;
+    }
+    &__sensorReadings{
+        margin-top: 26px;
+        display: flex;
+        width: 95vw;
+        height:170.2px;
+        background: #FFFFFF;
+box-shadow: 0px 0px 19px -1px rgba(0, 0, 0, 0.18);
+border-radius: 13px;
+justify-content: space-around;
+align-items: center;    
+}
+    &__BPMcont{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    &__BPM{
+        font-family: Montserrat;
+font-style: normal;
+font-weight: bold;
+font-size: 77.1875px;
+line-height: 94px;
+
+/* identical to box height */
+
+color: #57F3C4;
+text-align: center;
+    }
+    &__BPMText{
+        font-family: Poppins;
+font-style: normal;
+font-weight: 500;
+font-size: 14.72px;
+line-height: 103%;
+
+/* or 15px */
+text-align: center;
+
+color: #171817;
+justify-content: center;
+width: 30vw;
+    }
+    &__divider{
+        width: 1px;
+height: 170px;
+background: rgba(196, 196, 196, 0.62);
+    }
+
+}
+}
