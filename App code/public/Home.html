@@ -1,0 +1,48 @@
+<html>
+<head>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="Styles.css" ></style>
+</head>
+    <body>
+        <div class="container">
+            <div class="container__refresh" onclick="get()">
+                Refresh
+            </div>
+            <div class="container__sensorReadings">
+                <div class="container__BPMcont">
+                    <div id="bpm" class="container__BPM">0</div>
+                    <div class="container__BPMText">Beats Per Minute</div>
+                </div>
+                <div class="container__divider">
+
+                </div>
+                <div class="container__BPMcont">
+                    <div id="o2" class="container__BPM">0</div>
+                    <div class="container__BPMText">Oxygen Saturation</div>
+                </div>
+                    
+            </div>
+            <div class="age" id="age" contenteditable="True">Enter your Age</div>
+            <div class="container__sensorReadings">
+                <div class="container__BPMcont">
+                    <div id="expectedHR" class="container__BPM">0</div>
+                    <div class="container__BPMText">Minimum Heart Rate</div>
+                </div>
+                <div class="container__divider">
+
+                </div>
+                <div class="container__BPMcont">
+                    <div id="actualHR" class="container__BPM">0</div>
+                    <div class="container__BPMText">Estimated Heart Rate</div>
+                </div>
+                    
+            </div>
+
+<div class="container__refresh" onclick="sendMessage()">
+Send Emergency Message
+</div>
+</div>
+<script src="serverSide.js">
+</script>
+</body>
+</html>
