@@ -58,6 +58,7 @@ function sendMessage(){
     xhr.send(body)
     alert("Message Sent")    
 }
+ActualArray=[]
 function validate(){
     users=["apoorv"]
     pass=["apoorv"]
@@ -77,9 +78,14 @@ finalJSON={0:[]}
 function LabelEncoding(i){
 j=(""+i["date_died"]).split('-')
 const date1=new Date('1/1/2020')
-const date2=new Date(j[2],j[1],j[0])
-dates=(date2-date1)/100000
-console.log(i["sex"])
+if(i["date_died"]=="9999-99-99"){
+    dates=0
+}
+else{
+    dates=1
+}
+
+//console.log(i["sex"])
 ActualElement=[
 parseInt(i["sex"]),
 parseInt(i["pneumonia"]),
@@ -95,24 +101,74 @@ parseInt(i["intubed"]),
 parseInt(i["obesity"]),
 parseInt(i["other_disease"]),
 parseInt(i["pneumonia"]),
-parseInt(i["pregnency"]),
+parseInt(i["pregnancy"]),
 parseInt(i["renal_chronic"]),
 parseInt(i["sex"]),
 parseInt(i["tobacco"])
 ]
-console.log(ActualElement)
+ActualArray.push(ActualElement)
 }
+function euclidean(a,b){
+dist=0
+    for(let i =0;i<a.length;i++){
+        dist=dist+((a[i]-b[i])*(a[i]-b[i]))
+}
+dist=Math.sqrt(dist)
+return dist
+}
+
+
+function printer(){
+    tempData=[2,1,2,1,2,1,0,2,2,97,97,1,2,2,97,2,2,2]
+    mini=99999999
+    exii=''
+    miniArray=[]
+exiiArray=[]
+for(let j=0;j<Math.sqrt(ActualArray.length);j++){
+miniArray.push(99999999)
+exiiArray.push(-1)
+}
+    for(let jj=0;jj<ActualArray.length;jj++)
+    {
+        gg=euclidean(ActualArray[jj],tempData)
+      /*  if(gg<mini){
+            mini=gg
+            exii=ActualArray[jj]
+        */    
+       for(let kk=0;kk<miniArray.length;kk++){
+        if(gg<=miniArray[kk]){
+            miniArray[kk]=gg
+            exiiArray[kk]=ActualArray[jj]
+            break;
+        }
+    }
+        }
+        sumi=0
+        count=0
+        for(let hi=0;hi<exiiArray.length;hi++){
+            if(exiiArray[hi]!=-1){
+            if(exiiArray[hi][5]!=3){
+                sumi=sumi+exiiArray[hi][5]}
+            count++;
+        }
+        }
+        console.log("chances of covid "+parseInt(Math.abs((sumi/count)*100)))
+        //console.log(exiiArray)
+    }
+
 function FeatureEngineering(dataframe){
 indexList=[1,7,8,9,6,10,11,12,14,15,16,17,18,19,21,22,5]
-for(let j=1;j<50000;j++){
+for(let j=1;j<560000;j++){
     element={}
     for(let i=0;i<this.indexList.length;i++){
         element[dataframe[0][this.indexList[i]]]=dataframe[j][this.indexList[i]];
     }    
 finalJSON[0].push(element)
+LabelEncoding(finalJSON[0][j-1])
+
 }
-LabelEncoding(finalJSON[0][5])
-console.log(finalJSON)
+//console.log(finalJSON)
+printer()
 }
 function runner(i){
 
