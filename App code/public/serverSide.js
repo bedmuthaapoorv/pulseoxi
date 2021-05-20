@@ -1,3 +1,9 @@
+axios({
+    "method": "GET",
+    "url": "https://api.apify.com/v2/key-value-stores/toDWvRj1JpTXiM8FF/records/LATEST?disableRedirect=true"
+}).then(response1 => {
+    updateCovid(response1);
+});
 function get(){
     axios({
         "method": "GET",
@@ -5,12 +11,7 @@ function get(){
     }).then(response => {
         updateData(response.data);
     });
-    axios({
-        "method": "GET",
-        "url": "https://api.apify.com/v2/key-value-stores/toDWvRj1JpTXiM8FF/records/LATEST?disableRedirect=true"
-    }).then(response1 => {
-        updateCovid(response1);
-    });
+   
 }
 setInterval(get,2000);
 var Readings;
@@ -20,13 +21,13 @@ TSresponse=abc.feeds[0].field1;
 Readings=TSresponse.split(",");//[11.6,22]
     document.getElementById("bpm").innerHTML=Math.ceil(Readings[0]);
     document.getElementById("o2").innerHTML=Math.ceil(Math.abs(Readings[1]));
-    age=document.getElementById("age").innerHTML;
+    age=document.getElementById("age").value;
     document.getElementById("actualHR").innerHTML=Math.ceil(Math.ceil(Readings[0])*100/(220-age));
     document.getElementById("expectedHR").innerHTML=64;
     
 }
 function updateCovid(response1){
-    //console.log(response1.data.regionData[20]);
+    console.log(response1.data.regionData[20]);
     document.getElementById("totalInf").innerHTML=(response1.data.regionData[20].totalInfected);
     document.getElementById("newInf").innerHTML=Math.abs(response1.data.regionData[20].newInfected);
 
@@ -59,21 +60,7 @@ function sendMessage(){
     alert("Message Sent")    
 }
 ActualArray=[]
-function validate(){
-    users=["apoorv"]
-    pass=["apoorv"]
-    u=document.getElementById("username").value;
-    p=document.getElementById("password").value;
-    if(u=="apoorv"){
-        if(p=="apoorv"){
-            location.replace("Home.html");
-        }
-    }
-    else{
-        location.replace("https://www.w3schools.com")
-    }
 
-}
 finalJSON={0:[]}
 function LabelEncoding(i){
 j=(""+i["date_died"]).split('-')

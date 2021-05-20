@@ -25,7 +25,7 @@
                 </div>
                     
             </div>
-            <div class="age" id="age" contenteditable="True">Enter your Age</div>
+            <input class="age" id="age" contenteditable="True" placeholder="Enter age"></input>
             <div class="container__sensorReadings">
                 <div class="container__BPMcont">
                     <div id="expectedHR" class="container__BPM">0</div>
@@ -58,6 +58,33 @@ Send Emergency Message
     </div>
         
 </div>
+<div class="container__predictorTitle">Covid Predictor</div>
+<div class="container__covidTracker">
+
+    <div class="sections">
+        <div class="elements">
+            <input type="checkbox"><label>Male</label>
+            <input type="checkbox"><label>Female</label>
+        </div>
+        <div class="elements"><input type="checkbox"><label>pneumonia</label></div>
+        <div class="elements"><input type="checkbox"><label>asthama</label></div>
+        <div class="elements"><input type="checkbox"><label>cardiovascular disease</label></div>
+        <div class="elements"><input type="checkbox"><label>copd</label></div>
+        <div class="elements"><input type="checkbox"><label>diabetes</label></div>
+        <div class="elements"><input type="checkbox"><label>hypertension</label></div>
+        <div class="elements"><input type="checkbox"><label>icu</label></div>
+    </div>
+    <div class="sections">
+        <div class="elements"><input type="checkbox"><label>intubed</label></div>
+        <div class="elements"><input type="checkbox"><label>obesity</label></div>
+        <div class="elements"><input type="checkbox"><label>other disease</label></div>
+        <div class="elements"><input type="checkbox"><label>pneumonia</label></div>
+        <div class="elements"><input type="checkbox"><label>pregnency</label></div>
+        <div class="elements"><input type="checkbox"><label>renal chronic</label></div>
+        <div class="elements"><input type="checkbox"><label>tobacco</label></div>
+    </div>
+</div>
+<div class="container__refresh">Predict Data</div>
 </div>
 <script src="serverSide.js">
 </script>
