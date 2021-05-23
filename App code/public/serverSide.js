@@ -62,6 +62,95 @@ function sendMessage(){
 ActualArray=[]
 
 finalJSON={0:[]}
+function predictor(){
+    m=document.getElementById("male").checked;
+    f=document.getElementById("female").checked;
+    sex=1
+    if(m==true){
+        sex=2
+    }
+    else{
+        sex=1
+    }
+    c=document.getElementById("pneumonia").checked;
+    pneumonia=2
+    if(c==true){
+        pneumonia=1
+    }
+    else{
+        pneumonia=2
+    }
+    c=document.getElementById("asthma").checked;
+    ast=2
+    if(c==true){
+        ast=1
+    }
+    else{
+        ast=2
+    }
+    c=document.getElementById("cardio").checked;
+    cardio=2
+    if(c==true){
+        cardio=1
+    }
+    else{
+        cardio=2
+    }
+    c=document.getElementById("copd").checked;
+    copd=2
+    if(c==true){
+        copd=1
+    }
+    c=document.getElementById("diabetes").checked;
+    dia=2
+    if(c==true){
+        dia=1
+    }
+    c=document.getElementById("hypertension").checked;
+    hyp=2
+    if(c==true){
+        hyp=1
+    }
+    c=document.getElementById("icu").checked;
+    icu=2
+    if(c==true){
+        icu=1
+    }
+    c=document.getElementById("intubed").checked;
+    intubed=2
+    if(c==true){
+        intubed=1
+    }
+    c=document.getElementById("obesity").checked;
+    obesity=2
+    if(c==true){
+        obesity=1
+    }
+    c=document.getElementById("other").checked;
+    other=2
+    if(c==true){
+        other=1
+    }
+    c=document.getElementById("pregnency").checked;
+    preg=2
+    if(c==true){
+        preg=1
+    }
+    c=document.getElementById("renal").checked;
+    renal=2
+    if(c==true){
+        renal=1
+    }
+    c=document.getElementById("tobacco").checked;
+    tob=2
+    if(c==true){
+        tob=1
+    }
+    testArr=[sex,pneumonia,ast,cardio,copd,2,0,dia,hyp,icu,intubed,obesity,other,preg,renal,tob]
+    console.log(testArr)
+    printer(testArr)
+    
+}
 function LabelEncoding(i){
 j=(""+i["date_died"]).split('-')
 const date1=new Date('1/1/2020')
@@ -87,10 +176,8 @@ parseInt(i["icu"]),
 parseInt(i["intubed"]),
 parseInt(i["obesity"]),
 parseInt(i["other_disease"]),
-parseInt(i["pneumonia"]),
 parseInt(i["pregnancy"]),
 parseInt(i["renal_chronic"]),
-parseInt(i["sex"]),
 parseInt(i["tobacco"])
 ]
 ActualArray.push(ActualElement)
@@ -105,8 +192,8 @@ return dist
 }
 
 
-function printer(){
-    tempData=[2,1,2,1,2,1,0,2,2,97,97,1,2,2,97,2,2,2]
+function printer(testArr){
+    tempData=testArr
     mini=99999999
     exii=''
     miniArray=[]
@@ -135,11 +222,16 @@ exiiArray.push(-1)
         for(let hi=0;hi<exiiArray.length;hi++){
             if(exiiArray[hi]!=-1){
             if(exiiArray[hi][5]!=3){
-                sumi=sumi+exiiArray[hi][5]}
-            count++;
+                sumi=sumi+exiiArray[hi][5]
+            }
+            else{
+                sumi=sumi+0
+            }
+        count++
         }
         }
-        console.log("chances of covid "+parseInt(Math.abs((sumi/count)*100)))
+        res=(sumi/count)*33;
+        document.getElementById("result").innerHTML=Math.ceil(res*100)/100+"%";
         //console.log(exiiArray)
     }
 
@@ -155,7 +247,7 @@ LabelEncoding(finalJSON[0][j-1])
 
 }
 //console.log(finalJSON)
-printer()
+//printer()
 }
 function runner(i){
 

@@ -1,12 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@500&display=swap');
 body{
+
     .container{
-    display: flex;
+        
+        
+        display: flex;
     justify-content: space-around;
     flex-direction: column;
 
     align-items: center;
+    
     &__refresh{
         margin-top: 26px;
         display: flex;
@@ -116,4 +120,6 @@ align-items: center;
     font-size: 26px;   
 }
 }
+
 }
+

@@ -63,28 +63,28 @@ Send Emergency Message
 
     <div class="sections">
         <div class="elements">
-            <input type="checkbox"><label>Male</label>
-            <input type="checkbox"><label>Female</label>
+            <input type="checkbox" id="male"><label>Male</label>
+            <input type="checkbox" id="female"><label>Female</label>
         </div>
-        <div class="elements"><input type="checkbox"><label>pneumonia</label></div>
-        <div class="elements"><input type="checkbox"><label>asthama</label></div>
-        <div class="elements"><input type="checkbox"><label>cardiovascular disease</label></div>
-        <div class="elements"><input type="checkbox"><label>copd</label></div>
-        <div class="elements"><input type="checkbox"><label>diabetes</label></div>
-        <div class="elements"><input type="checkbox"><label>hypertension</label></div>
-        <div class="elements"><input type="checkbox"><label>icu</label></div>
+        <div class="elements"><input type="checkbox" id="pneumonia"><label>pneumonia</label></div>
+        <div class="elements"><input type="checkbox" id="asthma"><label>asthama</label></div>
+        <div class="elements"><input type="checkbox" id="cardio"><label>cardiovascular disease</label></div>
+        <div class="elements"><input type="checkbox" id="copd"><label>copd</label></div>
+        <div class="elements"><input type="checkbox" id="diabetes"><label>diabetes</label></div>
+        <div class="elements"><input type="checkbox" id="hypertension"><label>hypertension</label></div>
+        <div class="elements"><input type="checkbox" id="icu"><label>icu</label></div>
     </div>
     <div class="sections">
-        <div class="elements"><input type="checkbox"><label>intubed</label></div>
-        <div class="elements"><input type="checkbox"><label>obesity</label></div>
-        <div class="elements"><input type="checkbox"><label>other disease</label></div>
-        <div class="elements"><input type="checkbox"><label>pneumonia</label></div>
-        <div class="elements"><input type="checkbox"><label>pregnency</label></div>
-        <div class="elements"><input type="checkbox"><label>renal chronic</label></div>
-        <div class="elements"><input type="checkbox"><label>tobacco</label></div>
+        <div class="elements"><input type="checkbox" id="intubed"><label>intubed</label></div>
+        <div class="elements"><input type="checkbox" id="obesity"><label>obesity</label></div>
+        <div class="elements"><input type="checkbox" id="other"><label>other disease</label></div>
+        <div class="elements"><input type="checkbox" id="pregnency"><label>pregnency</label></div>
+        <div class="elements"><input type="checkbox" id="renal"><label>renal chronic</label></div>
+        <div class="elements"><input type="checkbox" id="tobacco"><label>tobacco</label></div>
     </div>
 </div>
-<div class="container__refresh">Predict Data</div>
+<div class="container__refresh" onclick="predictor()">Predict Data</div>
+<div class="PredictedResult" id="result" style="font-family: Montserrat;font-style: normal;font-weight: bold;font-size: 46px;">0%</div>
 </div>
 <script src="serverSide.js">
 </script>
